@@ -129,10 +129,14 @@ export const Hero: React.FC<HeroProps> = ({ currentLang }) => {
             />
 
             {/* Sub-headline */}
-            <p 
-              className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed"
-              dangerouslySetInnerHTML={{ __html: t('hero-subtitle') }}
-            />
+            <div className="space-y-4 text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+              {t('hero-subtitle').split('<br>').map((para, index) => (
+                <p 
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: para }}
+                />
+              ))}
+            </div>
 
             {/* Action Buttons: Stacked on mobile, row on desktop */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">

@@ -112,12 +112,12 @@ export const CustomerTestimonials: React.FC<CustomerTestimonialsProps> = ({ curr
           </p>
         </div>
 
-        {/* Testimonials Layout - Bento style Split */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        {/* Testimonials Layout - Centered Quote Card */}
+        <div className="max-w-4xl mx-auto space-y-6">
           
-          {/* Main Focus Rotating Quote Card (Left 7 Columns) */}
+          {/* Main Focus Rotating Quote Card */}
           <div 
-            className="lg:col-span-7 flex flex-col justify-between bg-white dark:bg-[#182229] border border-gray-100 dark:border-emerald-900/20 p-8 sm:p-10 shadow-sm relative overflow-hidden"
+            className="flex flex-col justify-between bg-white dark:bg-[#182229] border border-gray-100 dark:border-emerald-900/20 p-8 sm:p-10 shadow-lg rounded-3xl relative overflow-hidden"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             id="testimonial-carousel-card"
@@ -194,65 +194,18 @@ export const CustomerTestimonials: React.FC<CustomerTestimonialsProps> = ({ curr
             </div>
           </div>
 
-          {/* Business Directory Interactive Grid (Right 5 Columns) */}
-          <div className="lg:col-span-5 flex flex-col justify-between gap-4">
-            <div className="bg-white dark:bg-[#182229] border border-gray-100 dark:border-emerald-900/20 p-6 sm:p-8 shadow-sm h-full flex flex-col justify-between">
-              <div>
-                <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">
-                  {currentLang === 'hi' ? 'संतुष्ट व्यापार' : currentLang === 'hinglish' ? 'Verified Businesses' : 'Verified Businesses'}
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
-                  {currentLang === 'hi' 
-                    ? 'अलग-अलग क्षेत्रों के व्यापारी जो व्हाट्सएप पर बिलरेडी से अपना समय और पैसा बचा रहे हैं।' 
-                    : currentLang === 'hinglish' 
-                    ? 'Different fields ke vyapaari jo WhatsApp pe BillReady se apna time aur paisa bacha rahe hain.' 
-                    : 'Real merchants across various Indian sectors saving time and cost using BillReady.'}
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
-                  {testimonials.map((item, idx) => (
-                    <button
-                      key={item.id}
-                      onClick={() => handleSelect(idx)}
-                      className={`w-full text-left p-3.5 rounded-2xl border transition-all duration-300 flex items-center gap-3.5 group cursor-pointer ${
-                        activeIndex === idx
-                          ? 'border-[#075E54] dark:border-[#25D366] bg-[#075E54]/5 dark:bg-[#25D366]/5 shadow-sm'
-                          : 'border-gray-100 dark:border-emerald-900/10 hover:border-gray-200 dark:hover:border-emerald-800/40 hover:bg-gray-50/70 dark:hover:bg-emerald-950/20'
-                      }`}
-                      id={`testimonial-item-${item.id}`}
-                    >
-                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm border shrink-0 transition-transform duration-300 group-hover:scale-105 ${item.color} dark:opacity-90`}>
-                        {item.initials}
-                      </div>
-                      <div className="overflow-hidden">
-                        <h4 className={`font-bold text-sm truncate transition-colors duration-200 ${
-                          activeIndex === idx ? 'text-[#075E54] dark:text-[#25D366]' : 'text-gray-800 dark:text-gray-200'
-                        }`}>
-                          {item.name}
-                        </h4>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 font-medium truncate">
-                          {t(item.subKey)}
-                        </p>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Progress Bullet Indicators */}
-              <div className="flex justify-center gap-2 mt-6 lg:mt-8">
-                {testimonials.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => handleSelect(idx)}
-                    className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                      activeIndex === idx ? 'w-6 bg-[#075E54] dark:bg-[#25D366]' : 'w-2 bg-gray-200 dark:bg-emerald-950 hover:bg-gray-300 dark:hover:bg-emerald-900'
-                    }`}
-                    aria-label={`Go to testimonial ${idx + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
+          {/* Progress Bullet Indicators */}
+          <div className="flex justify-center gap-2 pt-2">
+            {testimonials.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleSelect(idx)}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                  activeIndex === idx ? 'w-6 bg-[#075E54] dark:bg-[#25D366]' : 'w-2 bg-gray-200 dark:bg-emerald-950 hover:bg-gray-300 dark:hover:bg-emerald-900'
+                }`}
+                aria-label={`Go to testimonial ${idx + 1}`}
+              />
+            ))}
           </div>
 
         </div>
