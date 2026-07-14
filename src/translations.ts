@@ -37,9 +37,9 @@ export const translations: TranslationDict = {
     hi: "व्हाट्सएप पर बिल बनाएं<br>एक संदेश में!"
   },
   "hero-subtitle": {
-    en: "Simplest billing system. Without any computer or complex software, create professional tax invoices, track stock inventory, and match GSTR invoices by sending quick chat messages on WhatsApp.",
-    hinglish: "Ab invoice banana ab bilkul aasaan.<br>Bas WhatsApp pe likho ya bolo — BillReady baaki sab kar dega.",
-    hi: "अब इनवॉइस बनाना बिल्कुल आसान है।<br>बस व्हाट्सएप पर लिखें या बोलें — बिलरेडी बाकी सब संभाल लेगा।"
+    en: "AI-powered WhatsApp-based voice-first GST bookkeeping system that supports 22+ languages & made for Indian MSMEs which contribute 30% to Indian GDP.<br>Without any computer or complex software, create professional tax invoices, track stock inventory, and match GSTR invoices by sending quick voice/text messages on WhatsApp.",
+    hinglish: "AI-powered WhatsApp-based voice-first GST bookkeeping system jo 22+ languages ko support karta hai aur Indian MSMEs ke liye bana hai jo India ki GDP mein 30% contribute karte hain.<br>Bina kisi computer ya complex software ke, WhatsApp par quick voice/text message bhejkar professional tax invoices banayein, stock inventory track karein, aur GSTR invoices match karein.",
+    hi: "एआई-संचालित व्हाट्सएप-आधारित वॉयस-फर्स्ट जीएसटी बहीखाता प्रणाली जो 22+ भाषाओं का समर्थन करती है और भारतीय एमएसएमई के लिए बनाई गई है जो भारतीय सकल घरेलू उत्पाद (जीडीपी) में 30% का योगदान करते हैं।<br>बिना किसी कंप्यूटर या जटिल सॉफ्टवेयर के, व्हाट्सएप पर त्वरित वॉयस/टेक्स्ट संदेश भेजकर पेशेवर टैक्स इनवॉइस बनाएं, स्टॉक इन्वेंट्री ट्रैक करें और जीएसटीआर इनवॉइस का मिलान करें।"
   },
   "hero-cta-primary": {
     en: "Start Now — It's Free 🟢",
@@ -142,9 +142,9 @@ export const translations: TranslationDict = {
     hi: "कोई प्रशिक्षण की आवश्यकता नहीं"
   },
   "features-badge": {
-    en: "Why We Are The Best",
-    hinglish: "BillReady kya kya kar sakta hai?",
-    hi: "बिलरेडी क्या-क्या कर सकता है?"
+    en: "AI Powered WhatsApp Based",
+    hinglish: "AI powered WhatsApp based",
+    hi: "एआई संचालित व्हाट्सएप आधारित"
   },
   "features-title": {
     en: "No Need for Complex Accounting Apps",
