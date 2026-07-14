@@ -42,9 +42,9 @@ export const translations: TranslationDict = {
     hi: "एआई-संचालित व्हाट्सएप-आधारित वॉयस-फर्स्ट जीएसटी बहीखाता प्रणाली जो 22+ भाषाओं का समर्थन करती है और भारतीय एमएसएमई के लिए बनाई गई है जो भारतीय सकल घरेलू उत्पाद (जीडीपी) में 30% का योगदान करते हैं।<br>बिना किसी कंप्यूटर या जटिल सॉफ्टवेयर के, व्हाट्सएप पर त्वरित वॉयस/टेक्स्ट संदेश भेजकर पेशेवर टैक्स इनवॉइस बनाएं, स्टॉक इन्वेंट्री ट्रैक करें और जीएसटीआर इनवॉइस का मिलान करें।"
   },
   "hero-cta-primary": {
-    en: "Start Now — It's Free 🟢",
-    hinglish: "Abhi Shuru Karo — Free Hai 🟢",
-    hi: "अभी शुरू करें — बिल्कुल मुफ्त है 🟢"
+    en: "Start Now — It's Free",
+    hinglish: "Abhi Shuru Karo — Free Hai",
+    hi: "अभी शुरू करें — बिल्कुल मुफ्त है"
   },
   "hero-cta-secondary": {
     en: "See how it works first ↓",
@@ -142,14 +142,34 @@ export const translations: TranslationDict = {
     hi: "कोई प्रशिक्षण की आवश्यकता नहीं"
   },
   "features-badge": {
-    en: "AI Powered WhatsApp Based",
-    hinglish: "AI powered WhatsApp based",
-    hi: "एआई संचालित व्हाट्सएप आधारित"
+    en: "Why We Are The Best",
+    hinglish: "BillReady kya kya kar sakta hai?",
+    hi: "बिलरेडी क्या-क्या कर सकता है?"
   },
   "features-title": {
     en: "No Need for Complex Accounting Apps",
     hinglish: "Sirf bill nahi — poora kaam sambhal lega",
     hi: "सिर्फ बिल नहीं — पूरा काम संभाल लेगा"
+  },
+  "feat-ai-title": {
+    en: "AI-Powered WhatsApp Based",
+    hinglish: "AI-Powered WhatsApp Billing",
+    hi: "एआई-संचालित व्हाट्सएप बिलिंग"
+  },
+  "feat-ai-desc": {
+    en: "Voice-first GST bookkeeping system supporting 22+ languages. Tailored for Indian MSMEs to manage business transactions in seconds.",
+    hinglish: "Voice-first GST bookkeeping system jo 22+ languages ko support karta hai. Indian MSMEs ke liye bilkul aasan aur fast transaction management.",
+    hi: "वॉयस-फर्स्ट जीएसटी बहीखाता प्रणाली जो 22+ भाषाओं का समर्थन करती है। भारतीय एमएसएमई के लिए लेनदेन का प्रबंधन सेकंडों में आसान बनाती है।"
+  },
+  "feat-lang-title": {
+    en: "Supported by 22+ Languages",
+    hinglish: "22+ Languages Ka Support",
+    hi: "22+ भाषाओं का समर्थन"
+  },
+  "feat-lang-desc": {
+    en: "Talk or type in English, Hindi, Hinglish, Tamil, Telugu, or any of the 22+ regional Indian languages. BillReady understands your local accent & language perfectly.",
+    hinglish: "English, Hindi, Hinglish, Tamil, ya apni kisi bhi regional bhasha mein bolo ya likho. BillReady har local bhasha aur bolchaal ko samajhta hai.",
+    hi: "अंग्रेजी, हिंदी, हिंग्लिश, तमिल, या अपनी किसी भी क्षेत्रीय भाषा में बोलें या लिखें। बिलरेडी आपकी स्थानीय भाषा और लहजे को पूरी तरह समझता है।"
   },
   "feat1-title": {
     en: "GST & Non-GST Invoices",
@@ -512,9 +532,9 @@ export const translations: TranslationDict = {
     hi: "बस अपना व्हाट्सएप नंबर दर्ज करें। हम आपको तुरंत बिलरेडी से जोड़ देंगे। कोई ऐप डाउनलोड करने की आवश्यकता नहीं है। बिल्कुल मुफ्त।"
   },
   "cta-btn": {
-    en: "Start Now 🟢",
-    hinglish: "Shuru Karo 🟢",
-    hi: "अभी शुरू करें 🟢"
+    en: "Start Now",
+    hinglish: "Shuru Karo",
+    hi: "अभी शुरू करें"
   },
   "demo-cmd-1": {
     en: "\"Make Verma Ji's invoice fast\"",

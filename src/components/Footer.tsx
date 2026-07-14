@@ -14,11 +14,11 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
   };
 
   return (
-    <footer className="bg-slate-900 text-gray-400 py-12 sm:py-16 border-t border-slate-800">
+    <footer className="bg-slate-900 text-gray-400 py-12 sm:py-16 border-t border-slate-800 dark:bg-[#0b141a] dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Links & Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-slate-800 dark:border-gray-800">
           
           {/* Brand Column */}
           <div className="lg:col-span-5 space-y-4">

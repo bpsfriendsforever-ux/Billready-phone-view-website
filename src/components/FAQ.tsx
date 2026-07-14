@@ -28,19 +28,19 @@ export const FAQ: React.FC<FAQProps> = ({ currentLang }) => {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-[#faf8f5] border-b border-gray-100">
+    <section id="faq" className="py-16 sm:py-24 bg-[#faf8f5] dark:bg-[#0f171c] border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
         <div className="text-center space-y-4 mb-12 sm:mb-20">
-          <div className="inline-flex items-center space-x-1.5 bg-emerald-50 border border-emerald-100 px-3.5 py-1.5 rounded-full text-[#075E54] text-xs sm:text-sm font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center space-x-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/40 px-3.5 py-1.5 rounded-full text-[#075E54] dark:text-[#25D366] text-xs sm:text-sm font-semibold uppercase tracking-wider">
             <HelpCircle className="w-4 h-4 text-[#25D366]" />
             <span>{t('faq-badge')}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
             {t('faq-heading')}
           </h2>
-          <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-500 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
             {t('faq-subheading')}
           </p>
         </div>
@@ -52,27 +52,27 @@ export const FAQ: React.FC<FAQProps> = ({ currentLang }) => {
             return (
               <div 
                 key={item.index}
-                className={`bg-white rounded-2xl border border-gray-100 shadow-sm transition-all duration-300 overflow-hidden ${isOpen ? 'ring-2 ring-[#25D366]/40 border-[#25D366]/30' : 'hover:border-gray-200'}`}
+                className={`bg-white dark:bg-[#182229] rounded-2xl border border-gray-100 dark:border-emerald-900/10 shadow-sm transition-all duration-300 overflow-hidden ${isOpen ? 'ring-2 ring-[#25D366]/40 border-[#25D366]/30' : 'hover:border-gray-200 dark:hover:border-emerald-800/40'}`}
               >
                 {/* Header Question Toggler */}
                 <button
                   onClick={() => handleToggle(item.index)}
-                  className="w-full text-left px-5 sm:px-6 py-5 flex items-center justify-between space-x-4 cursor-pointer focus:outline-none focus:bg-emerald-50/20"
+                  className="w-full text-left px-5 sm:px-6 py-5 flex items-center justify-between space-x-4 cursor-pointer focus:outline-none focus:bg-emerald-50/20 dark:focus:bg-emerald-950/10"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-sm sm:text-base font-extrabold text-gray-900 leading-snug">
+                  <span className="text-sm sm:text-base font-extrabold text-gray-900 dark:text-white leading-snug">
                     {t(item.qKey)}
                   </span>
-                  <div className={`p-1.5 rounded-xl bg-gray-50 text-gray-400 transition-all duration-300 ${isOpen ? 'bg-[#25D366]/10 text-[#075E54] rotate-180' : 'group-hover:text-gray-600'}`}>
+                  <div className={`p-1.5 rounded-xl bg-gray-50 dark:bg-[#202c33] text-gray-400 dark:text-gray-500 transition-all duration-300 ${isOpen ? 'bg-[#25D366]/10 text-[#075E54] dark:text-[#25D366] rotate-180' : 'group-hover:text-gray-600'}`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {/* Answer Box (Animated collapse/expand) */}
                 <div 
-                  className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[500px] border-t border-gray-100' : 'max-h-0'}`}
+                  className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[500px] border-t border-gray-100 dark:border-gray-800' : 'max-h-0'}`}
                 >
-                  <div className="px-5 sm:px-6 py-5 text-gray-600 text-xs sm:text-sm leading-relaxed bg-emerald-50/10">
+                  <div className="px-5 sm:px-6 py-5 text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed bg-emerald-50/10 dark:bg-emerald-950/10">
                     <p>{t(item.aKey)}</p>
                   </div>
                 </div>

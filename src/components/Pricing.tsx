@@ -13,16 +13,16 @@ export const Pricing: React.FC<PricingProps> = ({ currentLang }) => {
   };
 
   return (
-    <section id="pricing" className="py-16 sm:py-24 bg-white border-b border-gray-100">
+    <section id="pricing" className="py-16 sm:py-24 bg-white dark:bg-[#111B21] border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-20">
-          <div className="inline-flex items-center space-x-1.5 bg-emerald-50 border border-emerald-100 px-3.5 py-1.5 rounded-full text-[#075E54] text-xs sm:text-sm font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center space-x-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/40 px-3.5 py-1.5 rounded-full text-[#075E54] dark:text-[#25D366] text-xs sm:text-sm font-semibold uppercase tracking-wider">
             <span>{t('pricing-badge')}</span>
           </div>
           <h2 
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight"
             dangerouslySetInnerHTML={{ __html: t('pricing-title') }}
           />
         </div>
@@ -31,25 +31,25 @@ export const Pricing: React.FC<PricingProps> = ({ currentLang }) => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-stretch max-w-6xl mx-auto mb-12 sm:mb-16">
           
           {/* Plan 1: Basic Plan */}
-          <div className="bg-gray-50/60 rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:bg-white hover:border-gray-200">
+          <div className="bg-gray-50/60 dark:bg-[#182229] rounded-3xl p-6 sm:p-8 border border-gray-100 dark:border-emerald-900/10 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:bg-white hover:dark:bg-[#1f2c34] hover:border-gray-200 dark:hover:border-emerald-800/40">
             <div>
               {/* Header */}
               <div className="space-y-2 mb-6">
-                <span className="text-xs bg-gray-200 text-gray-800 font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                <span className="text-xs bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
                   {t('plan1-badge')}
                 </span>
-                <h3 className="text-xl font-bold text-gray-900">{t('plan1-title')}</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t('plan1-title')}</h3>
                 <div className="flex items-baseline space-x-1 pt-2">
-                  <span className="text-4xl font-extrabold text-gray-900">₹0</span>
-                  <span className="text-xs text-gray-500 font-semibold">/ {t('plan1-price-suffix')}</span>
+                  <span className="text-4xl font-extrabold text-gray-900 dark:text-white">₹0</span>
+                  <span className="text-xs text-gray-500 dark:text-gray-400 font-semibold">/ {t('plan1-price-suffix')}</span>
                 </div>
               </div>
 
               {/* Divider */}
-              <div className="h-px bg-gray-200/60 my-6"></div>
+              <div className="h-px bg-gray-200/60 dark:bg-gray-800/60 my-6"></div>
 
               {/* Feature Checklist */}
-              <ul className="space-y-4 text-sm text-gray-700">
+              <ul className="space-y-4 text-sm text-gray-700 dark:text-gray-300">
                 <li className="flex items-start space-x-3">
                   <Check className="w-4.5 h-4.5 text-[#25D366] mt-0.5 flex-shrink-0" />
                   <span dangerouslySetInnerHTML={{ __html: t('plan1-feat-1') }} />
@@ -73,7 +73,7 @@ export const Pricing: React.FC<PricingProps> = ({ currentLang }) => {
             <div className="pt-8">
               <a
                 href="#cta"
-                className="block w-full bg-white hover:bg-gray-50 border border-gray-200 text-gray-800 font-bold text-center px-4 py-3.5 rounded-2xl shadow-sm transition-all duration-200"
+                className="block w-full bg-white dark:bg-[#202c33] hover:bg-gray-50 dark:hover:bg-[#2a3942] border border-gray-200 dark:border-[#2a3942] text-gray-800 dark:text-white font-bold text-center px-4 py-3.5 rounded-2xl shadow-sm transition-all duration-200"
               >
                 {t('plan1-btn')}
               </a>
@@ -142,25 +142,25 @@ export const Pricing: React.FC<PricingProps> = ({ currentLang }) => {
           </div>
 
           {/* Plan 3: Enterprise Plan */}
-          <div className="bg-gray-50/60 rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:bg-white hover:border-gray-200">
+          <div className="bg-gray-50/60 dark:bg-[#182229] rounded-3xl p-6 sm:p-8 border border-gray-100 dark:border-emerald-900/10 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:bg-white hover:dark:bg-[#1f2c34] hover:border-gray-200 dark:hover:border-emerald-800/40">
             <div>
               {/* Header */}
               <div className="space-y-2 mb-6">
-                <span className="text-xs bg-gray-200 text-gray-800 font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                <span className="text-xs bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
                   {t('plan3-badge')}
                 </span>
-                <h3 className="text-xl font-bold text-gray-900">{t('plan3-title')}</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t('plan3-title')}</h3>
                 <div className="flex items-baseline space-x-1 pt-2">
-                  <span className="text-4xl font-extrabold text-gray-900">₹499</span>
-                  <span className="text-xs text-gray-500 font-semibold">/ {t('plan3-price-suffix')}</span>
+                  <span className="text-4xl font-extrabold text-gray-900 dark:text-white">₹499</span>
+                  <span className="text-xs text-gray-500 dark:text-gray-400 font-semibold">/ {t('plan3-price-suffix')}</span>
                 </div>
               </div>
 
               {/* Divider */}
-              <div className="h-px bg-gray-200/60 my-6"></div>
+              <div className="h-px bg-gray-200/60 dark:bg-gray-800/60 my-6"></div>
 
               {/* Feature Checklist */}
-              <ul className="space-y-4 text-sm text-gray-700">
+              <ul className="space-y-4 text-sm text-gray-700 dark:text-gray-300">
                 <li className="flex items-start space-x-3">
                   <Check className="w-4.5 h-4.5 text-[#25D366] mt-0.5 flex-shrink-0" />
                   <span dangerouslySetInnerHTML={{ __html: t('plan3-feat-1') }} />
@@ -184,7 +184,7 @@ export const Pricing: React.FC<PricingProps> = ({ currentLang }) => {
             <div className="pt-8">
               <a
                 href="#cta"
-                className="block w-full bg-white hover:bg-gray-50 border border-gray-200 text-gray-800 font-bold text-center px-4 py-3.5 rounded-2xl shadow-sm transition-all duration-200"
+                className="block w-full bg-white dark:bg-[#202c33] hover:bg-gray-50 dark:hover:bg-[#2a3942] border border-gray-200 dark:border-[#2a3942] text-gray-800 dark:text-white font-bold text-center px-4 py-3.5 rounded-2xl shadow-sm transition-all duration-200"
               >
                 {t('plan3-btn')}
               </a>
@@ -194,8 +194,8 @@ export const Pricing: React.FC<PricingProps> = ({ currentLang }) => {
         </div>
 
         {/* Reassurance text */}
-        <div className="text-center max-w-lg mx-auto bg-gray-50 border border-gray-100 p-4 rounded-2xl">
-          <p className="text-xs sm:text-sm text-gray-600 font-semibold flex items-center justify-center space-x-1.5">
+        <div className="text-center max-w-lg mx-auto bg-gray-50 dark:bg-[#182229] border border-gray-100 dark:border-emerald-900/10 p-4 rounded-2xl">
+          <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 font-semibold flex items-center justify-center space-x-1.5">
             <span>{t('pricing-reassurance-text')}</span>
           </p>
         </div>

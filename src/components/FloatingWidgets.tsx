@@ -39,7 +39,7 @@ export const FloatingWidgets: React.FC<FloatingWidgetsProps> = ({ currentLang })
       {showScroll && (
         <button
           onClick={scrollToTop}
-          className="p-3 bg-white hover:bg-gray-50 text-[#075E54] hover:text-[#25D366] border border-gray-100 rounded-full shadow-2xl transition-all duration-300 transform scale-100 hover:scale-110 active:scale-95 pointer-events-auto cursor-pointer focus:outline-none"
+          className="p-3 bg-white dark:bg-[#202c33] hover:bg-gray-50 dark:hover:bg-[#2a3942] text-[#075E54] dark:text-[#25D366] hover:text-[#25D366] border border-gray-100 dark:border-gray-800 rounded-full shadow-2xl transition-all duration-300 transform scale-100 hover:scale-110 active:scale-95 pointer-events-auto cursor-pointer focus:outline-none"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-5 h-5" />
@@ -54,7 +54,7 @@ export const FloatingWidgets: React.FC<FloatingWidgetsProps> = ({ currentLang })
       >
         {/* Tooltip text bubble */}
         {showTooltip && (
-          <div className="absolute right-full mr-3 bg-slate-900 text-white text-xs font-semibold py-1.5 px-3 rounded-xl shadow-xl border border-slate-800 whitespace-nowrap animate-fade-in hidden sm:block">
+          <div className="absolute right-full mr-3 bg-slate-900 dark:bg-[#1f2c34] text-white text-xs font-semibold py-1.5 px-3 rounded-xl shadow-xl border border-slate-800 dark:border-gray-700/80 whitespace-nowrap animate-fade-in hidden sm:block">
             {t('floating-widget-tooltip')}
           </div>
         )}

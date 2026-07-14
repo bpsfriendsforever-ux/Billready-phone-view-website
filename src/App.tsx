@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
 import Features from './components/Features';
 import LiveDemo from './components/LiveDemo';
+import { CustomerTestimonials } from './components/CustomerTestimonials';
 import VideoSection from './components/VideoSection';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -19,11 +20,38 @@ export default function App() {
     return saved === 'en' || saved === 'hi' || saved === 'hinglish' ? saved : 'hinglish';
   });
 
+  // Theme state: light or dark mode
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    const saved = localStorage.getItem('billready_theme');
+    if (saved === 'light' || saved === 'dark') return saved;
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  });
+
   // Track state changes to synchronize local storage
   const handleSetCurrentLang = (lang: Language) => {
     setCurrentLang(lang);
     localStorage.setItem('billready_lang', lang);
   };
+
+  const toggleTheme = () => {
+    setTheme(prev => {
+      const next = prev === 'light' ? 'dark' : 'light';
+      localStorage.setItem('billready_theme', next);
+      return next;
+    });
+  };
+
+  // Synchronize HTML element class list for full support
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
 
   // Pre-load custom Google Fonts to render displays perfectly
   useEffect(() => {
@@ -37,9 +65,9 @@ export default function App() {
   }, [currentLang]);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden antialiased selection:bg-[#25D366]/30 selection:text-emerald-950 font-sans scroll-smooth">
+    <div className={`min-h-screen bg-white dark:bg-[#111B21] text-gray-900 dark:text-gray-100 overflow-x-hidden antialiased selection:bg-[#25D366]/30 selection:text-emerald-950 font-sans scroll-smooth ${theme}`}>
       {/* 1. Header Navigation Bar */}
-      <Navbar currentLang={currentLang} setCurrentLang={handleSetCurrentLang} />
+      <Navbar currentLang={currentLang} setCurrentLang={handleSetCurrentLang} theme={theme} toggleTheme={toggleTheme} />
 
       {/* 2. Hero Presentation Section */}
       <Hero currentLang={currentLang} />
@@ -52,6 +80,9 @@ export default function App() {
 
       {/* 5. Interactive WhatsApp Demo Screen */}
       <LiveDemo currentLang={currentLang} />
+
+      {/* 5b. Customer Testimonials Grid & Carousel */}
+      <CustomerTestimonials currentLang={currentLang} />
 
       {/* 6. Product Presentation Video */}
       <VideoSection currentLang={currentLang} />

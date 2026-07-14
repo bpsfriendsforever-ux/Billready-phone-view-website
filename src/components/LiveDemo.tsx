@@ -289,20 +289,20 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
   ];
 
   return (
-    <section id="demo" className="py-16 sm:py-24 bg-white border-b border-gray-100">
+    <section id="demo" className="py-16 sm:py-24 bg-white dark:bg-[#111B21] border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-20">
-          <div className="inline-flex items-center space-x-1.5 bg-emerald-50 border border-emerald-100 px-3.5 py-1.5 rounded-full text-[#075E54] text-xs sm:text-sm font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center space-x-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/40 px-3.5 py-1.5 rounded-full text-[#075E54] dark:text-[#25D366] text-xs sm:text-sm font-semibold uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-[#25D366]" />
             <span>{t('demo-badge')}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight">
             {t('demo-title')}
           </h2>
           <p 
-            className="text-gray-500 text-sm sm:text-base leading-relaxed"
+            className="text-gray-500 dark:text-gray-300 text-sm sm:text-base leading-relaxed"
             dangerouslySetInnerHTML={{ __html: t('demo-desc') }}
           />
         </div>
@@ -312,7 +312,7 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
           
           {/* Command Card Selection Area (On mobile: displays first; stacks on top) */}
           <div className="lg:col-span-6 space-y-6">
-            <h3 className="text-lg font-bold text-gray-900 flex items-center space-x-2">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white flex items-center space-x-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
               <span>{t('chat-chips-label')}</span>
             </h3>
@@ -324,9 +324,9 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
                   key={chip.index}
                   onClick={() => handleChipClick(chip.index, chip.fullCmd)}
                   disabled={isTyping}
-                  className="bg-gray-50 hover:bg-emerald-50 hover:border-emerald-200 border border-gray-200/80 p-4 sm:p-5 rounded-2xl text-left text-xs sm:text-sm font-semibold text-gray-800 shadow-sm active:scale-95 transition-all duration-200 disabled:opacity-60 disabled:pointer-events-none flex items-center space-x-3 cursor-pointer group"
+                  className="bg-gray-50 dark:bg-emerald-950/10 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 hover:border-emerald-200 dark:hover:border-emerald-800/50 border border-gray-200/80 dark:border-emerald-900/20 p-4 sm:p-5 rounded-2xl text-left text-xs sm:text-sm font-semibold text-gray-800 dark:text-gray-200 shadow-sm active:scale-95 transition-all duration-200 disabled:opacity-60 disabled:pointer-events-none flex items-center space-x-3 cursor-pointer group"
                 >
-                  <div className="bg-white p-2 rounded-xl group-hover:bg-[#25D366]/10 text-emerald-950 transition-colors">
+                  <div className="bg-white dark:bg-[#202c33] p-2 rounded-xl group-hover:bg-[#25D366]/10 text-emerald-950 dark:text-emerald-300 transition-colors">
                     {t(chip.label).split(' ')[0]} {/* Grab the emoji */}
                   </div>
                   <span className="flex-1">{t(chip.fullCmd).replace(/^"|"$/g, '')}</span>
@@ -337,7 +337,7 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
 
           {/* Interactive Chat Window Display (Stacks underneath) */}
           <div ref={phoneContainerRef} className="lg:col-span-6 flex justify-center">
-            <div className="relative w-full max-w-[340px] sm:max-w-[380px] bg-[#ECE5DD] border-[10px] border-gray-900 rounded-[40px] shadow-2xl h-[520px] flex flex-col overflow-hidden">
+            <div className="relative w-full max-w-[340px] sm:max-w-[380px] bg-[#ECE5DD] dark:bg-[#0b141a] border-[10px] border-gray-900 dark:border-gray-800 rounded-[40px] shadow-2xl h-[520px] flex flex-col overflow-hidden">
               
               {/* Top Notch Bar */}
               <div className="absolute top-2 left-1/2 -translate-x-1/2 w-32 h-5 bg-gray-900 rounded-full z-20 flex items-center justify-center">
@@ -346,14 +346,14 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
               </div>
 
               {/* Chat Header */}
-              <div className="bg-[#075E54] pt-8 pb-3 px-4 flex items-center justify-between text-white shadow-md z-10">
+              <div className="bg-[#075E54] dark:bg-[#202c33] pt-8 pb-3 px-4 flex items-center justify-between text-white shadow-md z-10">
                 <div className="flex items-center space-x-2">
-                  <div className="w-9 h-9 rounded-full bg-emerald-100 flex items-center justify-center font-extrabold text-[#075E54]">
+                  <div className="w-9 h-9 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center font-extrabold text-[#075E54] dark:text-[#25D366]">
                     BR
                   </div>
                   <div>
                     <h3 className="font-bold text-sm tracking-wide">BillReady</h3>
-                    <p className="text-[10px] text-emerald-100">online</p>
+                    <p className="text-[10px] text-emerald-100 dark:text-gray-400">online</p>
                   </div>
                 </div>
                 <div className="text-emerald-100 text-sm font-bold">⋮</div>
@@ -370,16 +370,16 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
                       key={msg.id} 
                       className={`flex ${isUser ? 'justify-end' : 'justify-start'} animate-fade-in`}
                     >
-                      <div className={`text-gray-800 text-xs py-2 px-3 rounded-xl shadow-sm max-w-[85%] relative border ${isUser ? 'bg-[#DCF8C6] border-[#DCF8C6]' : 'bg-white border-gray-100'}`}>
+                      <div className={`text-gray-800 dark:text-[#e9edef] text-xs py-2 px-3 rounded-xl shadow-sm max-w-[85%] relative border ${isUser ? 'bg-[#DCF8C6] dark:bg-[#005c4b] border-[#DCF8C6] dark:border-transparent' : 'bg-white dark:bg-[#202c33] border-gray-100 dark:border-transparent'}`}>
                         <p dangerouslySetInnerHTML={{ __html: msg.text }} />
-                        <span className={`text-[8px] block text-right mt-1 ${isUser ? 'text-gray-500' : 'text-gray-400'}`}>
-                          {msg.time} {isUser && <span className="text-[#128C7E] ml-0.5">✓✓</span>}
+                        <span className={`text-[8px] block text-right mt-1 ${isUser ? 'text-gray-500 dark:text-emerald-200/60' : 'text-gray-400 dark:text-gray-500'}`}>
+                          {msg.time} {isUser && <span className="text-[#128C7E] dark:text-[#25D366] ml-0.5">✓✓</span>}
                         </span>
                         {/* Triangle Tail */}
                         {isUser ? (
-                          <div className="absolute right-[-6px] top-0 w-0 h-0 border-t-[8px] border-t-[#DCF8C6] border-r-[8px] border-r-transparent"></div>
+                          <div className="absolute right-[-6px] top-0 w-0 h-0 border-t-[8px] border-t-[#DCF8C6] dark:border-t-[#005c4b] border-r-[8px] border-r-transparent"></div>
                         ) : (
-                          <div className="absolute left-[-6px] top-0 w-0 h-0 border-t-[8px] border-t-white border-l-[8px] border-l-transparent"></div>
+                          <div className="absolute left-[-6px] top-0 w-0 h-0 border-t-[8px] border-t-white dark:border-t-[#202c33] border-l-[8px] border-l-transparent"></div>
                         )}
                       </div>
                     </div>
@@ -389,7 +389,7 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
                 {/* Self-Destructing Typing Indicator */}
                 {isTyping && (
                   <div className="flex justify-start">
-                    <div className="bg-white text-gray-800 py-2 px-3 rounded-xl shadow-sm border border-gray-100 flex items-center space-x-1">
+                    <div className="bg-white dark:bg-[#202c33] text-gray-800 dark:text-[#e9edef] py-2 px-3 rounded-xl shadow-sm border border-gray-100 dark:border-transparent flex items-center space-x-1">
                       <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
                       <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
                       <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
@@ -401,20 +401,20 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
               </div>
 
               {/* Chat Input */}
-              <form onSubmit={handleSendMessage} className="bg-[#f0f0f0] p-2 flex items-center space-x-1.5 border-t border-gray-200">
-                <div className="flex-1 bg-white rounded-full px-3.5 py-1.5 flex items-center justify-between text-xs text-gray-700 border border-gray-200 shadow-inner">
+              <form onSubmit={handleSendMessage} className="bg-[#f0f0f0] dark:bg-[#1f2c34] p-2 flex items-center space-x-1.5 border-t border-gray-200 dark:border-transparent">
+                <div className="flex-1 bg-white dark:bg-[#2a3942] rounded-full px-3.5 py-1.5 flex items-center justify-between text-xs text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-transparent shadow-inner">
                   <input
                     type="text"
                     value={inputText}
                     onChange={(e) => setInputText(e.target.value)}
                     disabled={isTyping}
                     placeholder={t('whatsapp-msg-placeholder')}
-                    className="flex-1 bg-transparent border-none outline-none text-gray-800 text-xs placeholder-gray-400 focus:ring-0"
+                    className="flex-1 bg-transparent border-none outline-none text-gray-800 dark:text-[#e9edef] text-xs placeholder-gray-400 focus:ring-0"
                   />
                   <button 
                     type="submit"
                     disabled={!inputText.trim() || isTyping}
-                    className="text-[#075E54] hover:text-[#25D366] disabled:text-gray-300 transition-colors cursor-pointer"
+                    className="text-[#075E54] dark:text-[#00a884] hover:text-[#25D366] disabled:text-gray-300 dark:disabled:text-gray-600 transition-colors cursor-pointer"
                   >
                     <Send className="w-3.5 h-3.5" />
                   </button>
@@ -426,7 +426,7 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
                     setInputText(currentLang === 'hi' ? 'आज की बिक्री दिखाएं' : currentLang === 'hinglish' ? 'Aaj ki bikri dikhao' : "Show me today's sales report");
                     scrollToPhone();
                   }}
-                  className="bg-[#075E54] hover:bg-[#0b7468] p-2 rounded-full text-white cursor-pointer active:scale-95 transition-transform disabled:opacity-50"
+                  className="bg-[#075E54] dark:bg-[#00a884] hover:bg-[#0b7468] dark:hover:bg-[#00bfa5] p-2 rounded-full text-white cursor-pointer active:scale-95 transition-transform disabled:opacity-50"
                   title="Voice Command Shortcut"
                 >
                   <Mic className="w-4 h-4" />

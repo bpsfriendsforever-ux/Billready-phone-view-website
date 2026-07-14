@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ChevronDown, Check, Globe } from 'lucide-react';
+import { Menu, X, ChevronDown, Check, Globe, Sun, Moon } from 'lucide-react';
 import { Language } from '../types';
 import translations from '../translations';
 import Logo from './Logo';
@@ -7,9 +7,11 @@ import Logo from './Logo';
 interface NavbarProps {
   currentLang: Language;
   setCurrentLang: (lang: Language) => void;
+  theme: 'light' | 'dark';
+  toggleTheme: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ currentLang, setCurrentLang }) => {
+export const Navbar: React.FC<NavbarProps> = ({ currentLang, setCurrentLang, theme, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
 
@@ -81,6 +83,20 @@ export const Navbar: React.FC<NavbarProps> = ({ currentLang, setCurrentLang }) =
               )}
             </div>
 
+            {/* Desktop Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-xl bg-emerald-950/60 border border-emerald-800 hover:border-emerald-700 text-white transition-all focus:outline-none flex items-center justify-center cursor-pointer"
+              aria-label={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              id="theme-toggle-desktop"
+            >
+              {theme === 'dark' ? (
+                <Sun className="w-4 h-4 text-amber-400" />
+              ) : (
+                <Moon className="w-4 h-4 text-[#25D366]" />
+              )}
+            </button>
+
             {/* Primary CTA */}
             <a
               href="#cta"
@@ -118,6 +134,20 @@ export const Navbar: React.FC<NavbarProps> = ({ currentLang, setCurrentLang }) =
                 </div>
               )}
             </div>
+
+            {/* Mobile Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg bg-emerald-950/60 border border-emerald-800 text-white transition-all focus:outline-none flex items-center justify-center cursor-pointer shadow-sm"
+              aria-label={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              id="theme-toggle-mobile"
+            >
+              {theme === 'dark' ? (
+                <Sun className="w-4 h-4 text-amber-400" />
+              ) : (
+                <Moon className="w-4 h-4 text-[#25D366]" />
+              )}
+            </button>
 
             {/* Hamburger Button */}
             <button

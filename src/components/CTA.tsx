@@ -58,7 +58,7 @@ export const CTA: React.FC<CTAProps> = ({ currentLang }) => {
   };
 
   return (
-    <section id="cta" className="relative py-16 sm:py-24 bg-gradient-to-b from-white via-emerald-50/10 to-[#f4fcf8] overflow-hidden border-b border-gray-100">
+    <section id="cta" className="relative py-16 sm:py-24 bg-gradient-to-b from-white via-emerald-50/10 to-[#f4fcf8] dark:from-[#111B21] dark:via-[#0b141a]/40 dark:to-[#0f171c] overflow-hidden border-b border-gray-100 dark:border-gray-800">
       
       {/* Falling Confetti Particles overlay */}
       {status === 'success' && (
@@ -81,7 +81,7 @@ export const CTA: React.FC<CTAProps> = ({ currentLang }) => {
       )}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="bg-emerald-950 text-white rounded-3xl p-8 sm:p-12 lg:p-16 border-4 border-emerald-800 shadow-2xl relative overflow-hidden">
+        <div className="bg-emerald-950 dark:bg-[#182229] text-white rounded-3xl p-8 sm:p-12 lg:p-16 border-4 border-emerald-800 dark:border-emerald-900/40 shadow-2xl relative overflow-hidden">
           
           {/* Background overlay decorations */}
           <div className="absolute -right-16 -bottom-16 w-64 h-64 bg-emerald-800/20 rounded-full blur-2xl pointer-events-none"></div>
@@ -90,7 +90,7 @@ export const CTA: React.FC<CTAProps> = ({ currentLang }) => {
           {/* Core Content */}
           <div className="text-center space-y-6 max-w-2xl mx-auto">
             
-            <div className="inline-flex items-center space-x-1.5 bg-emerald-900 border border-emerald-800 px-3.5 py-1.5 rounded-full text-[#25D366] text-xs sm:text-sm font-semibold tracking-wider uppercase">
+            <div className="inline-flex items-center space-x-1.5 bg-emerald-900 dark:bg-emerald-950 border border-emerald-800 px-3.5 py-1.5 rounded-full text-[#25D366] text-xs sm:text-sm font-semibold tracking-wider uppercase">
               <Sparkles className="w-4 h-4 text-[#25D366] animate-pulse" />
               <span>{t('plan1-title')}</span>
             </div>
@@ -99,7 +99,7 @@ export const CTA: React.FC<CTAProps> = ({ currentLang }) => {
               {t('cta-title')}
             </h2>
 
-            <p className="text-emerald-200/90 text-sm sm:text-base leading-relaxed">
+            <p className="text-emerald-200/90 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
               {t('cta-desc')}
             </p>
 
@@ -107,13 +107,13 @@ export const CTA: React.FC<CTAProps> = ({ currentLang }) => {
             <div className="max-w-md mx-auto pt-4">
               {status === 'success' ? (
                 /* Success Redirection Card */
-                <div className="bg-white text-gray-900 p-6 rounded-2xl shadow-xl border border-emerald-200 animate-fade-in space-y-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-800 mx-auto">
-                    <CheckCircle className="w-6 h-6 text-emerald-700" />
+                <div className="bg-white dark:bg-[#202c33] text-gray-900 dark:text-white p-6 rounded-2xl shadow-xl border border-emerald-200 dark:border-emerald-900/30 animate-fade-in space-y-4">
+                  <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-950 rounded-full flex items-center justify-center text-emerald-800 dark:text-[#25D366] mx-auto">
+                    <CheckCircle className="w-6 h-6 text-emerald-700 dark:text-[#25D366]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900">Successfully Connected!</h3>
-                    <p className="text-xs text-gray-500 mt-1">
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">Successfully Connected!</h3>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                       Click below to open WhatsApp and send your first message to BillReady.
                     </p>
                   </div>
@@ -127,7 +127,7 @@ export const CTA: React.FC<CTAProps> = ({ currentLang }) => {
                   </a>
                   <button 
                     onClick={() => { setStatus('idle'); setPhoneNumber(''); }}
-                    className="text-xs text-gray-400 hover:text-gray-600 underline font-semibold focus:outline-none"
+                    className="text-xs text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 underline font-semibold focus:outline-none cursor-pointer"
                   >
                     Enter another number
                   </button>
@@ -138,17 +138,17 @@ export const CTA: React.FC<CTAProps> = ({ currentLang }) => {
                   <div className="flex flex-col sm:flex-row items-stretch gap-3">
                     
                     {/* Input wrapper with country code fixed prefix */}
-                    <div className="relative flex-1 rounded-2xl overflow-hidden shadow-sm flex border-2 border-emerald-800/80 bg-white text-gray-900">
-                      <div className="bg-gray-100 px-3.5 flex items-center border-r border-gray-200 select-none">
-                        <span className="text-xs font-bold text-gray-700 mr-1.5">🇮🇳</span>
-                        <span className="text-sm font-bold text-gray-800">+91</span>
+                    <div className="relative flex-1 rounded-2xl overflow-hidden shadow-sm flex border-2 border-emerald-800/80 dark:border-emerald-900 bg-white dark:bg-[#202c33] text-gray-900 dark:text-white">
+                      <div className="bg-gray-100 dark:bg-[#111b21] px-3.5 flex items-center border-r border-gray-200 dark:border-gray-800 select-none">
+                        <span className="text-xs font-bold text-gray-700 dark:text-gray-300 mr-1.5">🇮🇳</span>
+                        <span className="text-sm font-bold text-gray-800 dark:text-gray-200">+91</span>
                       </div>
                       <input
                         type="tel"
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, '').slice(0, 10))}
                         placeholder={getPlaceholder()}
-                        className="w-full px-4 py-3.5 text-sm sm:text-base font-semibold focus:outline-none placeholder-gray-400"
+                        className="w-full px-4 py-3.5 text-sm sm:text-base font-semibold focus:outline-none placeholder-gray-400 bg-transparent text-gray-900 dark:text-white"
                         maxLength={10}
                         required
                       />
