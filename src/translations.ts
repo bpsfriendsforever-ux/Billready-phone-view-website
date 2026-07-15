@@ -806,6 +806,11 @@ export const translations: TranslationDict = {
     hinglish: "Instagram pe follow karein",
     hi: "हमें इंस्टाग्राम पर फॉलो करें"
   },
+  "footer-take-survey": {
+    en: "Take Survey",
+    hinglish: "Survey karein",
+    hi: "सर्वे में भाग लें"
+  },
   "floating-widget-tooltip": {
     en: "Chat with BillReady",
     hinglish: "BillReady se baat karo",

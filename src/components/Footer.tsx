@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Instagram } from 'lucide-react';
+import { Heart, Instagram, ClipboardList } from 'lucide-react';
 import { Language } from '../types';
 import translations from '../translations';
 import Logo from './Logo';
@@ -77,17 +77,31 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs text-gray-500">
           <p>{t('footer-copyright')}</p>
           <div className="flex flex-col sm:flex-row items-center gap-3">
-            {/* Instagram Button */}
-            <a 
-              href="https://www.instagram.com/billready.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 bg-gradient-to-r from-pink-600 via-purple-600 to-orange-500 hover:opacity-90 active:scale-95 text-white font-medium px-4 py-1.5 rounded-full text-[11px] sm:text-xs shadow-md hover:shadow-lg transition-all duration-200"
-              id="footer-instagram-btn"
-            >
-              <Instagram className="w-3.5 h-3.5" />
-              <span>{t('footer-follow-instagram')}</span>
-            </a>
+            <div className="flex flex-col items-center sm:items-end gap-2">
+              {/* Instagram Button */}
+              <a 
+                href="https://www.instagram.com/billready.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 bg-gradient-to-r from-pink-600 via-purple-600 to-orange-500 hover:opacity-90 active:scale-95 text-white font-medium px-4 py-1.5 rounded-full text-[11px] sm:text-xs shadow-md hover:shadow-lg transition-all duration-200"
+                id="footer-instagram-btn"
+              >
+                <Instagram className="w-3.5 h-3.5" />
+                <span>{t('footer-follow-instagram')}</span>
+              </a>
+
+              {/* Take Survey Button */}
+              <a 
+                href="https://forms.gle/QdHgkHi4vkLPboVS9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 bg-slate-800 hover:bg-slate-700 active:scale-95 text-gray-200 hover:text-white font-medium px-4 py-1.5 rounded-full text-[11px] sm:text-xs shadow-md hover:shadow-lg transition-all duration-200 border border-slate-700"
+                id="footer-survey-btn"
+              >
+                <ClipboardList className="w-3.5 h-3.5 text-[#25D366]" />
+                <span>{t('footer-take-survey')}</span>
+              </a>
+            </div>
             
             <div className="flex items-center space-x-1.5 bg-slate-950 px-3.5 py-1.5 rounded-full border border-slate-800">
               <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 animate-pulse" />
