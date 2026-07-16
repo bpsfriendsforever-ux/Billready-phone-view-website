@@ -97,9 +97,6 @@ export const Pricing: React.FC<PricingProps> = ({ currentLang }) => {
                   <span className="text-5xl font-extrabold text-[#25D366]">₹199</span>
                   <span className="text-xs text-emerald-200 font-semibold">/ {t('plan2-price-suffix')}</span>
                 </div>
-                <p className="text-[11px] text-emerald-300 font-bold italic pt-1">
-                  {t('plan2-yearly-note')}
-                </p>
               </div>
 
               {/* Divider */}
@@ -146,9 +143,6 @@ export const Pricing: React.FC<PricingProps> = ({ currentLang }) => {
             <div>
               {/* Header */}
               <div className="space-y-2 mb-6">
-                <span className="text-xs bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-                  {t('plan3-badge')}
-                </span>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white">{t('plan3-title')}</h3>
                 <div className="flex items-baseline space-x-1 pt-2">
                   <span className="text-4xl font-extrabold text-gray-900 dark:text-white">₹499</span>

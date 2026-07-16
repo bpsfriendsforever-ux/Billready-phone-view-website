@@ -30,3 +30,17 @@
 .animate-fade-in {
   animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Scroll-triggered fade-in animations */
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1000ms cubic-bezier(0.215, 0.61, 0.355, 1), transform 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: opacity, transform;
+}
+
+.section-fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

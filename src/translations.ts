@@ -16,10 +16,20 @@ export const translations: TranslationDict = {
     hinglish: "Live Chat Demo",
     hi: "लाइव चैट डेमो"
   },
+  "nav-testimonials": {
+    en: "Testimonials",
+    hinglish: "Reviews",
+    hi: "समीक्षाएं"
+  },
   "nav-pricing": {
     en: "Pricing",
     hinglish: "Pricing",
     hi: "कीमतें"
+  },
+  "nav-faq": {
+    en: "FAQs",
+    hinglish: "Sawaal Jawab",
+    hi: "सवाल-जवाब"
   },
   "nav-cta": {
     en: "Start Free Now →",
@@ -27,14 +37,14 @@ export const translations: TranslationDict = {
     hi: "मुफ़्त शुरू करें →"
   },
   "hero-badge": {
-    en: "WhatsApp pe kaam karta hai",
+    en: "Works on WhatsApp",
     hinglish: "WhatsApp pe kaam karta hai",
     hi: "व्हाट्सएप पर काम करता है"
   },
   "hero-title": {
-    en: "Your entire shop's billing, now on WhatsApp",
-    hinglish: "Bill banao WhatsApp pe<br>Ek message mein!",
-    hi: "व्हाट्सएप पर बिल बनाएं<br>एक संदेश में!"
+    en: "Your entire shop's <span class=\"text-[#075E54] dark:text-[#25D366] uppercase\">Bookkeeping</span>, now on WhatsApp",
+    hinglish: "Aapke poore dukaan ka <span class=\"text-[#075E54] dark:text-[#25D366] uppercase\">Hisaab-Kitaab</span>, ab WhatsApp pe",
+    hi: "आपकी पूरी दुकान का <span class=\"text-[#075E54] dark:text-[#25D366] uppercase\">बहीखाता</span>, अब व्हाट्सएप पर"
   },
   "hero-subtitle": {
     en: "AI-powered WhatsApp-based voice-first GST bookkeeping system that supports 22+ languages & made for Indian MSMEs which contribute 30% to Indian GDP.<br>Without any computer or complex software, create professional tax invoices, track stock inventory, and match GSTR invoices by sending quick voice/text messages on WhatsApp.",
@@ -52,14 +62,14 @@ export const translations: TranslationDict = {
     hi: "पहले देखें कि कैसे काम करता है ↓"
   },
   "trust-no-app": {
-    en: "No app download",
-    hinglish: "Koi app download nahi",
-    hi: "कोई ऐप डाउनलोड नहीं"
+    en: "AI-Powered Voice-First Interface",
+    hinglish: "AI-Powered Voice-First Interface",
+    hi: "एआई-संचालित वॉयस-फर्स्ट इंटरफ़ेस"
   },
   "trust-free": {
-    en: "Entirely free",
-    hinglish: "Bilkul free",
-    hi: "बिल्कुल मुफ्त"
+    en: "No app download, works directly from WhatsApp",
+    hinglish: "Koi app download nahi, direct WhatsApp se chalta hai",
+    hi: "कोई ऐप डाउनलोड नहीं, सीधे व्हाट्सएप से चलता है"
   },
   "trust-langs": {
     en: "Works in 22+ languages",
@@ -811,6 +821,76 @@ export const translations: TranslationDict = {
     hinglish: "Survey karein",
     hi: "सर्वे में भाग लें"
   },
+  "footer-help-btn": {
+    en: "Help / Suggestions 💬",
+    hinglish: "Help / Suggestions 💬",
+    hi: "सहायता / सुझाव 💬"
+  },
+  "feedback-modal-title": {
+    en: "Help & Suggestions 💬",
+    hinglish: "Help & Suggestions 💬",
+    hi: "सहायता और सुझाव 💬"
+  },
+  "feedback-modal-desc": {
+    en: "Have a suggestion, question, or found a bug? Tell us below, and we'll format your message to send directly to BillReady support via WhatsApp.",
+    hinglish: "Kuch sujhaav hai, sawaal hai, ya bug mila? Hum aapke message ko format karke seedha WhatsApp support pe bhej denge.",
+    hi: "कोई सुझाव, प्रश्न या कोई बग मिला? हमें नीचे बताएं, और हम आपके संदेश को सीधे व्हाट्सएप सहायता पर भेजने के लिए प्रारूपित करेंगे।"
+  },
+  "feedback-name-label": {
+    en: "Your Name",
+    hinglish: "Aapka Naam",
+    hi: "आपका नाम"
+  },
+  "feedback-business-label": {
+    en: "Business Name (Optional)",
+    hinglish: "Dukaan ka Naam (Optional)",
+    hi: "दुकान का नाम (वैकल्पिक)"
+  },
+  "feedback-category-label": {
+    en: "Category",
+    hinglish: "Category",
+    hi: "श्रेणी"
+  },
+  "feedback-message-label": {
+    en: "Your Message / Suggestion",
+    hinglish: "Aapka Message / Sujhaav",
+    hi: "आपका संदेश / सुझाव"
+  },
+  "feedback-send-btn": {
+    en: "Send on WhatsApp 💬",
+    hinglish: "WhatsApp par bhejein 💬",
+    hi: "व्हाट्सएप पर भेजें 💬"
+  },
+  "feedback-cancel-btn": {
+    en: "Cancel",
+    hinglish: "Cancel",
+    hi: "रद्द करें"
+  },
+  "feedback-cat-suggestion": {
+    en: "Suggestion 💡",
+    hinglish: "Sujhaav 💡",
+    hi: "सुझाव 💡"
+  },
+  "feedback-cat-feature": {
+    en: "Feature Request ✨",
+    hinglish: "Feature Request ✨",
+    hi: "नई सुविधा का अनुरोध ✨"
+  },
+  "feedback-cat-question": {
+    en: "Question/Query ❓",
+    hinglish: "Sawaal/Query ❓",
+    hi: "प्रश्न/पूछताछ ❓"
+  },
+  "feedback-cat-bug": {
+    en: "Report a Bug 🐛",
+    hinglish: "Bug report karein 🐛",
+    hi: "बग रिपोर्ट करें 🐛"
+  },
+  "feedback-cat-other": {
+    en: "Other 📝",
+    hinglish: "Kuch aur 📝",
+    hi: "अन्य 📝"
+  },
   "floating-widget-tooltip": {
     en: "Chat with BillReady",
     hinglish: "BillReady se baat karo",
@@ -867,7 +947,7 @@ export const translations: TranslationDict = {
     hi: "कोई सॉफ़्टवेयर इंस्टॉलेशन या जटिल स्प्रेडशीट प्रबंधित करने की आवश्यकता नहीं है।"
   },
   "video-feature-3-title": {
-    en: "CA Reports aur Hisaab",
+    en: "CA Reports & Bookkeeping",
     hinglish: "CA Reports aur Hisaab",
     hi: "सीए रिपोर्ट और हिसाब"
   },

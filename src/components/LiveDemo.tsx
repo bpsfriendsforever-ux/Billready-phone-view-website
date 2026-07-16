@@ -313,7 +313,6 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
           {/* Command Card Selection Area (On mobile: displays first; stacks on top) */}
           <div className="lg:col-span-6 space-y-6">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white flex items-center space-x-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
               <span>{t('chat-chips-label')}</span>
             </h3>
 

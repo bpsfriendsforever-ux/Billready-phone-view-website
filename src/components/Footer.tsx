@@ -6,9 +6,10 @@ import Logo from './Logo';
 
 interface FooterProps {
   currentLang: Language;
+  onHelpClick?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
+export const Footer: React.FC<FooterProps> = ({ currentLang, onHelpClick }) => {
   const t = (key: string) => {
     return translations[key]?.[currentLang] || key;
   };
@@ -68,6 +69,17 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
               <li><a href="#cta" className="hover:text-[#25D366] transition-colors">{t('footer-col3-link1')}</a></li>
               <li className="font-mono text-gray-300">{t('footer-col3-link2')}</li>
               <li><a href="#faq" className="hover:text-[#25D366] transition-colors">{t('footer-col3-link3')}</a></li>
+              {onHelpClick && (
+                <li>
+                  <button 
+                    onClick={onHelpClick}
+                    className="hover:text-[#25D366] text-emerald-400 transition-colors text-left flex items-center gap-1 cursor-pointer font-medium"
+                    id="footer-help-suggestions-btn"
+                  >
+                    <span>{t('footer-help-btn')}</span>
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
 

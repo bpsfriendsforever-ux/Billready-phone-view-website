@@ -52,8 +52,14 @@ export const Navbar: React.FC<NavbarProps> = ({ currentLang, setCurrentLang, the
             <a href="#demo" className="text-gray-200 hover:text-[#25D366] transition-colors text-sm font-medium">
               {t('nav-demo')}
             </a>
+            <a href="#testimonials" className="text-gray-200 hover:text-[#25D366] transition-colors text-sm font-medium">
+              {t('nav-testimonials')}
+            </a>
             <a href="#pricing" className="text-gray-200 hover:text-[#25D366] transition-colors text-sm font-medium">
               {t('nav-pricing')}
+            </a>
+            <a href="#faq" className="text-gray-200 hover:text-[#25D366] transition-colors text-sm font-medium">
+              {t('nav-faq')}
             </a>
 
             {/* Desktop Language Selector */}
@@ -188,11 +194,25 @@ export const Navbar: React.FC<NavbarProps> = ({ currentLang, setCurrentLang, the
               {t('nav-demo')}
             </a>
             <a
+              href="#testimonials"
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-4 py-3 rounded-xl text-base font-semibold text-gray-200 hover:text-white hover:bg-emerald-900 transition-colors"
+            >
+              {t('nav-testimonials')}
+            </a>
+            <a
               href="#pricing"
               onClick={() => setIsMenuOpen(false)}
               className="block px-4 py-3 rounded-xl text-base font-semibold text-gray-200 hover:text-white hover:bg-emerald-900 transition-colors"
             >
               {t('nav-pricing')}
+            </a>
+            <a
+              href="#faq"
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-4 py-3 rounded-xl text-base font-semibold text-gray-200 hover:text-white hover:bg-emerald-900 transition-colors"
+            >
+              {t('nav-faq')}
             </a>
             <div className="pt-2 px-4">
               <a

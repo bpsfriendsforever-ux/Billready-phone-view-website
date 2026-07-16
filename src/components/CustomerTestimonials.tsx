@@ -19,6 +19,14 @@ export const CustomerTestimonials: React.FC<CustomerTestimonialsProps> = ({ curr
 
   const testimonials = [
     {
+      id: 7,
+      name: currentLang === 'hi' ? 'कानपुर क्लॉथ मर्चेंट' : currentLang === 'hinglish' ? 'Kanpur Cloth Merchant' : 'Kanpur Cloth Merchant',
+      initials: 'K',
+      subKey: 'hero-testi-sub',
+      quoteKey: 'hero-testi-quote',
+      color: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+    },
+    {
       id: 1,
       name: currentLang === 'hi' ? 'रमेश चंद्र' : currentLang === 'hinglish' ? 'Ramesh Chand' : 'Ramesh Chand',
       initials: 'RC',

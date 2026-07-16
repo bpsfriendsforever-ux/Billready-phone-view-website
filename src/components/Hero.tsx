@@ -156,43 +156,21 @@ export const Hero: React.FC<HeroProps> = ({ currentLang }) => {
             </div>
 
             {/* Mini Trust Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-center lg:text-left text-gray-500 dark:text-gray-400 text-sm font-medium">
-              <div className="flex items-center justify-center lg:justify-start space-x-2 bg-white dark:bg-emerald-950/10 sm:bg-transparent p-3 sm:p-0 rounded-xl border border-gray-100 dark:border-emerald-900/30 sm:border-0 shadow-sm sm:shadow-none">
-                <ShieldCheck className="w-5 h-5 text-[#25D366]" />
-                <span>{t('trust-no-app')}</span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left text-gray-500 dark:text-gray-400 text-sm font-medium">
+              <div className="flex items-center justify-start space-x-2 bg-white dark:bg-emerald-950/10 sm:bg-transparent p-3 sm:p-0 rounded-xl border border-gray-100 dark:border-emerald-900/30 sm:border-0 shadow-sm sm:shadow-none">
+                <Mic className="w-5 h-5 text-[#25D366] shrink-0" />
+                <span className="text-left">{t('trust-no-app')}</span>
               </div>
-              <div className="flex items-center justify-center lg:justify-start space-x-2 bg-white dark:bg-emerald-950/10 sm:bg-transparent p-3 sm:p-0 rounded-xl border border-gray-100 dark:border-emerald-900/30 sm:border-0 shadow-sm sm:shadow-none">
-                <ShieldCheck className="w-5 h-5 text-[#25D366]" />
-                <span>{t('trust-free')}</span>
+              <div className="flex items-center justify-start space-x-2 bg-white dark:bg-emerald-950/10 sm:bg-transparent p-3 sm:p-0 rounded-xl border border-gray-100 dark:border-emerald-900/30 sm:border-0 shadow-sm sm:shadow-none">
+                <MessageSquare className="w-5 h-5 text-[#25D366] shrink-0" />
+                <span className="text-left">{t('trust-free')}</span>
               </div>
-              <div className="flex items-center justify-center lg:justify-start space-x-2 bg-white dark:bg-emerald-950/10 sm:bg-transparent p-3 sm:p-0 rounded-xl border border-gray-100 dark:border-emerald-900/30 sm:border-0 shadow-sm sm:shadow-none">
-                <ShieldCheck className="w-5 h-5 text-[#25D366]" />
-                <span>{t('trust-langs')}</span>
+              <div className="flex items-center justify-start space-x-2 bg-white dark:bg-emerald-950/10 sm:bg-transparent p-3 sm:p-0 rounded-xl border border-gray-100 dark:border-emerald-900/30 sm:border-0 shadow-sm sm:shadow-none">
+                <ShieldCheck className="w-5 h-5 text-[#25D366] shrink-0" />
+                <span className="text-left">{t('trust-langs')}</span>
               </div>
             </div>
 
-            {/* Social Proof Card */}
-            <div className="p-5 bg-white dark:bg-[#182229] rounded-2xl border border-gray-100 dark:border-emerald-900/20 shadow-sm flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4 max-w-2xl mx-auto lg:mx-0">
-              <div className="relative">
-                <div className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-950 border border-emerald-200 dark:border-emerald-800 flex items-center justify-center text-emerald-800 dark:text-emerald-200 font-extrabold text-lg">
-                  K
-                </div>
-                <div className="absolute -bottom-1 -right-1 bg-[#25D366] text-white p-0.5 rounded-full border border-white dark:border-[#182229]">
-                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.004 2c-5.518 0-9.996 4.477-9.996 9.995 0 1.763.459 3.483 1.332 5.006L2 22l5.127-1.344c1.47.8 3.12 1.222 4.877 1.222 5.517 0 9.996-4.478 9.996-9.995S17.521 2 12.004 2zm0 18.286c-1.554 0-3.08-.418-4.413-1.205l-.316-.188-3.285.86.876-3.204-.206-.328c-.865-1.378-1.321-2.972-1.321-4.614 0-4.57 3.719-8.288 8.288-8.288 4.568 0 8.287 3.718 8.287 8.288s-3.719 8.287-8.287 8.287z"/>
-                  </svg>
-                </div>
-              </div>
-              <div className="flex-1 text-center sm:text-left">
-                <p className="text-gray-700 dark:text-gray-300 italic text-sm md:text-base leading-relaxed">
-                  {t('hero-testi-quote')}
-                </p>
-                <div className="mt-2 text-xs font-bold text-gray-900 dark:text-white flex items-center justify-center sm:justify-start space-x-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#25D366]"></span>
-                  <span>{t('hero-testi-sub')}</span>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Right Side: Animated WhatsApp Interface Mockup */}
