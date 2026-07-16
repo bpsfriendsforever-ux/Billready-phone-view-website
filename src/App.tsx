@@ -15,20 +15,17 @@ import FloatingWidgets from './components/FloatingWidgets';
 import FeedbackModal from './components/FeedbackModal';
 
 export default function App() {
-  // Initialize current language state from local storage or default to Hinglish
+  // Initialize current language state from local storage or default to English
   const [currentLang, setCurrentLang] = useState<Language>(() => {
     const saved = localStorage.getItem('billready_lang') as Language;
-    return saved === 'en' || saved === 'hi' || saved === 'hinglish' ? saved : 'hinglish';
+    return saved === 'en' || saved === 'hi' || saved === 'hinglish' ? saved : 'en';
   });
 
   // Theme state: light or dark mode
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     const saved = localStorage.getItem('billready_theme');
     if (saved === 'light' || saved === 'dark') return saved;
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
+    return 'dark';
   });
 
   // Scroll reading progress bar state
