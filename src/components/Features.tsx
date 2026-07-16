@@ -98,14 +98,20 @@ export const Features: React.FC<FeaturesProps> = ({ currentLang }) => {
       titleKey: 'feat8-title',
       descKey: 'feat8-desc',
     },
+    {
+      id: 'feat-file-gst',
+      icon: <Sparkles className="w-6 h-6 text-[#075E54] dark:text-[#25D366]" />,
+      titleKey: 'feat-file-gst-title',
+      descKey: 'feat-file-gst-desc',
+    },
   ];
 
   return (
-    <section id="features" className="py-16 sm:py-24 bg-[#faf8f5] dark:bg-[#0f171c] border-b border-gray-100 dark:border-gray-800">
+    <section id="features" className="py-10 sm:py-16 bg-[#faf8f5] dark:bg-[#0f171c] border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
           <div className="inline-flex items-center space-x-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/40 px-3.5 py-1.5 rounded-full text-[#075E54] dark:text-[#25D366] text-xs sm:text-sm font-semibold uppercase tracking-wider">
             <span>{t('features-badge')}</span>
           </div>
@@ -115,31 +121,31 @@ export const Features: React.FC<FeaturesProps> = ({ currentLang }) => {
         </div>
 
         {/* Bento Grid: 12 beautiful responsive feature cards (stacking to 1 column on mobile) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           
           {/* Loop standard features */}
           {featuresList.map((feature) => (
             <div 
               key={feature.id}
-              className="bg-white dark:bg-[#182229] rounded-3xl p-6 sm:p-8 border border-gray-100/80 dark:border-emerald-900/20 shadow-sm hover:shadow-xl hover:border-emerald-200 hover:dark:border-emerald-800/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white dark:bg-[#182229] rounded-3xl p-4 sm:p-5 border border-gray-100/80 dark:border-emerald-900/20 shadow-sm hover:shadow-xl hover:border-emerald-200 hover:dark:border-emerald-800/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Header Row: Icon and Decorative Pill */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 flex items-center justify-center border border-emerald-100/30 dark:border-emerald-900/30">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-11 h-11 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 flex items-center justify-center border border-emerald-100/30 dark:border-emerald-900/30">
                     {feature.icon}
                   </div>
                   <span className="w-2.5 h-2.5 rounded-full bg-[#25D366]"></span>
                 </div>
 
                 {/* Card Title */}
-                <h3 className="text-lg sm:text-xl font-extrabold text-gray-900 dark:text-white mb-3 leading-snug">
+                <h3 className="text-lg font-extrabold text-gray-900 dark:text-white mb-2 leading-snug">
                   {t(feature.titleKey)}
                 </h3>
 
                 {/* Card Desc */}
                 <p 
-                  className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
+                  className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed line-clamp-3"
                   dangerouslySetInnerHTML={{ __html: t(feature.descKey) }}
                 />
               </div>
@@ -148,12 +154,12 @@ export const Features: React.FC<FeaturesProps> = ({ currentLang }) => {
 
           {/* Feature 12: Special ITC Save Card with Custom Interactive Tooltip */}
           <div 
-            className="bg-white dark:bg-[#182229] rounded-3xl p-6 sm:p-8 border border-gray-100/80 dark:border-emerald-900/20 shadow-sm hover:shadow-xl hover:border-emerald-200 hover:dark:border-emerald-800/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-visible"
+            className="bg-white dark:bg-[#182229] rounded-3xl p-4 sm:p-5 border border-gray-100/80 dark:border-emerald-900/20 shadow-sm hover:shadow-xl hover:border-emerald-200 hover:dark:border-emerald-800/50 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-visible"
           >
             <div>
               {/* Header Row: Icon and Toggling Help Widget */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 flex items-center justify-center border border-emerald-100/30 dark:border-emerald-900/30">
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-11 h-11 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 flex items-center justify-center border border-emerald-100/30 dark:border-emerald-900/30">
                   <ShieldCheck className="w-6 h-6 text-[#075E54] dark:text-[#25D366]" />
                 </div>
                 
@@ -188,7 +194,7 @@ export const Features: React.FC<FeaturesProps> = ({ currentLang }) => {
               </div>
 
               {/* Title */}
-              <h3 className="text-lg sm:text-xl font-extrabold text-gray-900 dark:text-white mb-3 leading-snug flex items-center space-x-2">
+              <h3 className="text-lg font-extrabold text-gray-900 dark:text-white mb-2 leading-snug flex items-center space-x-2">
                 <span>{t('feat5-title')}</span>
                 <span className="text-xs bg-[#25D366]/20 text-[#075E54] dark:text-[#25D366] font-bold px-2 py-0.5 rounded-full">Save Tax</span>
               </h3>

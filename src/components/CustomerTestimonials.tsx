@@ -103,11 +103,11 @@ export const CustomerTestimonials: React.FC<CustomerTestimonialsProps> = ({ curr
   }, [isHovered]);
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50/50 dark:bg-[#0a1510]/50 border-y border-gray-100 dark:border-gray-800 overflow-hidden">
+    <section id="testimonials" className="py-12 bg-gray-50/50 dark:bg-[#0a1510]/50 border-y border-gray-100 dark:border-gray-800 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#075E54]/10 dark:bg-emerald-950/40 text-[#075E54] dark:text-[#25D366] text-xs font-semibold tracking-wider uppercase mb-3">
             <Star className="w-3.5 h-3.5 fill-[#075E54] dark:fill-[#25D366] text-[#075E54] dark:text-[#25D366]" />
             {currentLang === 'hi' ? 'ग्राहक समीक्षाएं' : currentLang === 'hinglish' ? 'Customer Reviews' : 'Customer Testimonials'}

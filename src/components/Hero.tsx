@@ -102,25 +102,17 @@ export const Hero: React.FC<HeroProps> = ({ currentLang }) => {
   };
 
   return (
-    <section id="hero" className="relative bg-gradient-to-b from-[#f4fcf8] via-white to-[#faf8f5] dark:from-[#0a1510] dark:via-[#111B21] dark:to-[#0f171c] py-12 lg:py-24 overflow-hidden border-b border-gray-100 dark:border-gray-800">
+    <section id="hero" className="relative bg-gradient-to-b from-[#f4fcf8] via-white to-[#faf8f5] dark:from-[#0a1510] dark:via-[#111B21] dark:to-[#0f171c] py-8 lg:py-12 overflow-hidden border-b border-gray-100 dark:border-gray-800">
       {/* Visual Background Accent Details */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-50 dark:bg-emerald-900/10 rounded-full blur-3xl opacity-60 -z-10 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#DCF8C6]/30 dark:bg-emerald-800/10 rounded-full blur-3xl opacity-50 -z-10 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Responsive Grid Structure (Stacks vertically on mobile, columns on desktop) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           {/* Left Side: Product Positioning & Pitch */}
-          <div className="lg:col-span-7 text-center lg:text-left space-y-6 sm:space-y-8 animate-fade-in">
-            {/* WhatsApp Badge */}
-            <div className="inline-flex items-center space-x-2 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/40 px-3.5 py-1.5 rounded-full shadow-sm text-[#075E54] dark:text-[#25D366] text-xs sm:text-sm font-semibold transition-transform hover:scale-105">
-              <span className="flex h-2.5 w-2.5 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#25D366]"></span>
-              </span>
-              <span>{t('hero-badge')}</span>
-            </div>
+          <div className="lg:col-span-7 text-center lg:text-left space-y-4 sm:space-y-5 animate-fade-in">
 
             {/* Main Headline */}
             <h1 
@@ -129,7 +121,7 @@ export const Hero: React.FC<HeroProps> = ({ currentLang }) => {
             />
 
             {/* Sub-headline */}
-            <div className="space-y-4 text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <div className="space-y-3 text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
               {t('hero-subtitle').split('<br>').map((para, index) => (
                 <p 
                   key={index}
@@ -139,24 +131,24 @@ export const Hero: React.FC<HeroProps> = ({ currentLang }) => {
             </div>
 
             {/* Action Buttons: Stacked on mobile, row on desktop */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-1">
               <a
                 href="#cta"
-                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-emerald-950 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg shadow-emerald-500/10 hover:shadow-xl hover:shadow-emerald-500/30 text-center transition-all duration-300 transform hover:-translate-y-1"
+                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba59] active:scale-95 text-emerald-950 px-8 py-3.5 rounded-2xl font-bold text-lg shadow-lg shadow-emerald-500/10 hover:shadow-xl hover:shadow-emerald-500/30 text-center transition-all duration-300 transform hover:-translate-y-1"
                 id="hero-primary-btn"
               >
                 {t('hero-cta-primary')}
               </a>
               <a
                 href="#demo"
-                className="w-full sm:w-auto bg-white dark:bg-emerald-950/20 hover:bg-gray-50 dark:hover:bg-emerald-950/40 border border-gray-200 dark:border-emerald-800 text-gray-700 dark:text-gray-200 px-6 py-4 rounded-2xl font-semibold text-base shadow-sm hover:shadow-md text-center transition-all duration-300 hover:border-gray-300 dark:hover:border-emerald-700 transform hover:-translate-y-0.5 active:scale-95"
+                className="w-full sm:w-auto bg-white dark:bg-emerald-950/20 hover:bg-gray-50 dark:hover:bg-emerald-950/40 border border-gray-200 dark:border-emerald-800 text-gray-700 dark:text-gray-200 px-6 py-3.5 rounded-2xl font-semibold text-base shadow-sm hover:shadow-md text-center transition-all duration-300 hover:border-gray-300 dark:hover:border-emerald-700 transform hover:-translate-y-0.5 active:scale-95"
               >
                 {t('hero-cta-secondary')}
               </a>
             </div>
 
             {/* Mini Trust Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left text-gray-500 dark:text-gray-400 text-sm font-medium">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-left text-gray-500 dark:text-gray-400 text-sm font-medium">
               <div className="flex items-center justify-start space-x-2 bg-white dark:bg-emerald-950/10 sm:bg-transparent p-3 sm:p-0 rounded-xl border border-gray-100 dark:border-emerald-900/30 sm:border-0 shadow-sm sm:shadow-none">
                 <Mic className="w-5 h-5 text-[#25D366] shrink-0" />
                 <span className="text-left">{t('trust-no-app')}</span>

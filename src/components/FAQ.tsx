@@ -28,11 +28,11 @@ export const FAQ: React.FC<FAQProps> = ({ currentLang }) => {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-[#faf8f5] dark:bg-[#0f171c] border-b border-gray-100 dark:border-gray-800">
+    <section id="faq" className="py-10 sm:py-16 bg-[#faf8f5] dark:bg-[#0f171c] border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
-        <div className="text-center space-y-4 mb-12 sm:mb-20">
+        <div className="text-center space-y-4 mb-8 sm:mb-12">
           <div className="inline-flex items-center space-x-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/40 px-3.5 py-1.5 rounded-full text-[#075E54] dark:text-[#25D366] text-xs sm:text-sm font-semibold uppercase tracking-wider">
             <HelpCircle className="w-4 h-4 text-[#25D366]" />
             <span>{t('faq-badge')}</span>

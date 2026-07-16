@@ -13,11 +13,11 @@ export const Pricing: React.FC<PricingProps> = ({ currentLang }) => {
   };
 
   return (
-    <section id="pricing" className="py-16 sm:py-24 bg-white dark:bg-[#111B21] border-b border-gray-100 dark:border-gray-800">
+    <section id="pricing" className="py-10 sm:py-16 bg-white dark:bg-[#111B21] border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
           <div className="inline-flex items-center space-x-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/40 px-3.5 py-1.5 rounded-full text-[#075E54] dark:text-[#25D366] text-xs sm:text-sm font-semibold uppercase tracking-wider">
             <span>{t('pricing-badge')}</span>
           </div>
@@ -28,7 +28,7 @@ export const Pricing: React.FC<PricingProps> = ({ currentLang }) => {
         </div>
 
         {/* 3-Column Pricing Responsive Grid (Stacks vertically on mobile) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-stretch max-w-6xl mx-auto mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 items-stretch max-w-6xl mx-auto mb-8 sm:mb-10">
           
           {/* Plan 1: Basic Plan */}
           <div className="bg-gray-50/60 dark:bg-[#182229] rounded-3xl p-6 sm:p-8 border border-gray-100 dark:border-emerald-900/10 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:bg-white hover:dark:bg-[#1f2c34] hover:border-gray-200 dark:hover:border-emerald-800/40">

@@ -38,13 +38,23 @@ export const CTA: React.FC<CTAProps> = ({ currentLang }) => {
     e.preventDefault();
     if (!validatePhone(phoneNumber)) {
       setStatus('error');
+      if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        navigator.vibrate([100, 50, 100]); // error pulse
+      }
       return;
+    }
+
+    if (typeof navigator !== 'undefined' && navigator.vibrate) {
+      navigator.vibrate(15); // tap feedback
     }
 
     setStatus('loading');
 
     setTimeout(() => {
       setStatus('success');
+      if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        navigator.vibrate([30, 50, 30]); // double-pulse success haptic
+      }
       // Spawn confetti particles
       const colors = ['#25D366', '#075E54', '#128C7E', '#DCF8C6', '#facc15', '#38bdf8'];
       const newConfetti = Array.from({ length: 40 }).map((_, i) => ({
@@ -58,7 +68,7 @@ export const CTA: React.FC<CTAProps> = ({ currentLang }) => {
   };
 
   return (
-    <section id="cta" className="relative py-16 sm:py-24 bg-gradient-to-b from-white via-emerald-50/10 to-[#f4fcf8] dark:from-[#111B21] dark:via-[#0b141a]/40 dark:to-[#0f171c] overflow-hidden border-b border-gray-100 dark:border-gray-800">
+    <section id="cta" className="relative py-10 sm:py-16 bg-gradient-to-b from-white via-emerald-50/10 to-[#f4fcf8] dark:from-[#111B21] dark:via-[#0b141a]/40 dark:to-[#0f171c] overflow-hidden border-b border-gray-100 dark:border-gray-800">
       
       {/* Falling Confetti Particles overlay */}
       {status === 'success' && (
@@ -81,14 +91,14 @@ export const CTA: React.FC<CTAProps> = ({ currentLang }) => {
       )}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="bg-emerald-950 dark:bg-[#182229] text-white rounded-3xl p-8 sm:p-12 lg:p-16 border-4 border-emerald-800 dark:border-emerald-900/40 shadow-2xl relative overflow-hidden">
+        <div className="bg-emerald-950 dark:bg-[#182229] text-white rounded-3xl p-6 sm:p-10 lg:p-12 border-4 border-emerald-800 dark:border-emerald-900/40 shadow-2xl relative overflow-hidden">
           
           {/* Background overlay decorations */}
           <div className="absolute -right-16 -bottom-16 w-64 h-64 bg-emerald-800/20 rounded-full blur-2xl pointer-events-none"></div>
           <div className="absolute -left-16 -top-16 w-48 h-48 bg-[#25D366]/10 rounded-full blur-xl pointer-events-none"></div>
 
           {/* Core Content */}
-          <div className="text-center space-y-6 max-w-2xl mx-auto">
+          <div className="text-center space-y-4 max-w-2xl mx-auto">
             
             <div className="inline-flex items-center space-x-1.5 bg-emerald-900 dark:bg-emerald-950 border border-emerald-800 px-3.5 py-1.5 rounded-full text-[#25D366] text-xs sm:text-sm font-semibold tracking-wider uppercase">
               <Sparkles className="w-4 h-4 text-[#25D366] animate-pulse" />

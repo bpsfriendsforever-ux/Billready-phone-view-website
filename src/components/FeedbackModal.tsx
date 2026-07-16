@@ -25,7 +25,14 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose, c
     e.preventDefault();
     if (!message.trim()) {
       setError(currentLang === 'hi' ? 'कृपया अपना संदेश दर्ज करें' : 'Please enter your message');
+      if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        navigator.vibrate([100, 50, 100]); // error vibration pattern
+      }
       return;
+    }
+
+    if (typeof navigator !== 'undefined' && navigator.vibrate) {
+      navigator.vibrate(15); // tiny click
     }
 
     setError('');

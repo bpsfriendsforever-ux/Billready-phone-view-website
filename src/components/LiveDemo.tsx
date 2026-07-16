@@ -174,6 +174,10 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
     if (e) e.preventDefault();
     if (!inputText.trim() || isTyping) return;
 
+    if (typeof navigator !== 'undefined' && navigator.vibrate) {
+      navigator.vibrate(15); // soft haptic feedback on send message
+    }
+
     scrollToPhone();
 
     const userText = inputText.trim();
@@ -243,6 +247,10 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
   const handleChipClick = (index: number, labelKey: string) => {
     if (isTyping) return;
 
+    if (typeof navigator !== 'undefined' && navigator.vibrate) {
+      navigator.vibrate(20); // quick haptic vibration on interactive action click
+    }
+
     scrollToPhone();
 
     const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -289,11 +297,11 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({ currentLang }) => {
   ];
 
   return (
-    <section id="demo" className="py-16 sm:py-24 bg-white dark:bg-[#111B21] border-b border-gray-100 dark:border-gray-800">
+    <section id="demo" className="py-10 sm:py-16 bg-white dark:bg-[#111B21] border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
           <div className="inline-flex items-center space-x-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/40 px-3.5 py-1.5 rounded-full text-[#075E54] dark:text-[#25D366] text-xs sm:text-sm font-semibold uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-[#25D366]" />
             <span>{t('demo-badge')}</span>

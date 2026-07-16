@@ -197,9 +197,9 @@ export const translations: TranslationDict = {
     hi: "बोलकर बिल बनाएं"
   },
   "feat2-desc": {
-    en: "Find typing hard? Send a voice note in Hindi. BillReady listens and prepares the invoice.",
-    hinglish: "Type karna mushkil lagta hai? Voice message bhejo Hindi mein. BillReady sunega aur automatic bill banayega.",
-    hi: "टाइप करना मुश्किल लगता है? वॉयस मैसेज भेजें हिंदी में। बिलरेडी सुनेगा और ऑटोमेटिक बिल बनाएगा।"
+    en: "Find typing hard? Send a voice note in 22+ languages. BillReady listens and prepares the invoice.",
+    hinglish: "Type karna mushkil lagta hai? Voice message bhejo 22+ languages mein. BillReady sunega aur automatic bill banayega.",
+    hi: "टाइप करना मुश्किल लगता है? 22+ भाषाओं में वॉयस मैसेज भेजें। बिलरेडी सुनेगा और ऑटोमेटिक बिल बनाएगा।"
   },
   "feat-upi-title": {
     en: "UPI QR on Every Invoice",
@@ -290,6 +290,16 @@ export const translations: TranslationDict = {
     en: "Record shop expenses like rent, utilities, and salaries on WhatsApp. Access monthly summaries instantly.",
     hinglish: "Dukaan ke saare kharche jaise rent, salary, ya chai-paani ka hisaab seedha WhatsApp pe daalein. Mahine ka poora kharcha report ek click mein payein.",
     hi: "दुकान के सभी खर्च जैसे किराया, वेतन या चाय-पानी का हिसाब सीधे व्हाट्सएप पर दर्ज करें। एक क्लिक में पूरे महीने की खर्च रिपोर्ट पाएं।"
+  },
+  "feat-file-gst-title": {
+    en: "File GST using AI",
+    hinglish: "AI Se GST File Karein",
+    hi: "एआई से जीएसटी फाइल करें"
+  },
+  "feat-file-gst-desc": {
+    en: "File your GSTR-1 and GSTR-3B returns seamlessly using AI. Autopilot audit checks ensure 100% error-free and compliance-guaranteed filing in clicks.",
+    hinglish: "AI ki madad se apni GSTR-1 aur GSTR-3B returns bina kisi pareshani ke file karein. Autopilot checks se 100% accurate aur zero-error filing.",
+    hi: "एआई की मदद से अपनी GSTR-1 और GSTR-3B रिटर्न बिना किसी परेशानी के फाइल करें। ऑटोपायलट जांच से 100% सटीक और त्रुटि-रहित फाइलिंग।"
   },
   "feat5-title": {
     en: "Save ITC",

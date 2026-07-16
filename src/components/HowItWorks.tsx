@@ -13,11 +13,11 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ currentLang }) => {
   };
 
   return (
-    <section id="how-it-works" className="py-16 sm:py-24 bg-white dark:bg-[#111B21] border-b border-gray-100 dark:border-gray-800">
+    <section id="how-it-works" className="py-10 sm:py-16 bg-white dark:bg-[#111B21] border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
           <div className="inline-flex items-center space-x-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/40 px-3.5 py-1.5 rounded-full text-[#075E54] dark:text-[#25D366] text-xs sm:text-sm font-semibold uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-[#25D366] animate-pulse" />
             <span>{t('hiw-badge')}</span>
@@ -28,11 +28,11 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ currentLang }) => {
         </div>
 
         {/* 3-Step Responsive Grid (Stacks on mobile, horizontal on desktop) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-stretch mb-16 sm:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6 items-stretch mb-8 sm:mb-10">
           
           {/* Step 1 */}
-          <div className="flex flex-col bg-emerald-50/40 dark:bg-emerald-950/10 rounded-3xl p-6 sm:p-8 border border-emerald-50 dark:border-emerald-900/20 hover:border-emerald-100/80 hover:dark:border-emerald-800/40 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="flex items-center space-x-4 mb-6">
+          <div className="flex flex-col bg-emerald-50/40 dark:bg-emerald-950/10 rounded-3xl p-5 sm:p-6 border border-emerald-50 dark:border-emerald-900/20 hover:border-emerald-100/80 hover:dark:border-emerald-800/40 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="flex items-center space-x-4 mb-4">
               <div className="w-12 h-12 rounded-2xl bg-[#075E54] dark:bg-[#00a884] text-white flex items-center justify-center font-extrabold text-lg shadow-md shadow-emerald-950/20">
                 1
               </div>
@@ -42,7 +42,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ currentLang }) => {
             </div>
             
             <p 
-              className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-6 flex-1"
+              className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-4 flex-1"
               dangerouslySetInnerHTML={{ __html: t('step1-desc') }}
             />
 
@@ -58,8 +58,8 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ currentLang }) => {
           </div>
 
           {/* Step 2 */}
-          <div className="flex flex-col bg-emerald-50/40 dark:bg-emerald-950/10 rounded-3xl p-6 sm:p-8 border border-emerald-50 dark:border-emerald-900/20 hover:border-emerald-100/80 hover:dark:border-emerald-800/40 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="flex items-center space-x-4 mb-6">
+          <div className="flex flex-col bg-emerald-50/40 dark:bg-emerald-950/10 rounded-3xl p-5 sm:p-6 border border-emerald-50 dark:border-emerald-900/20 hover:border-emerald-100/80 hover:dark:border-emerald-800/40 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="flex items-center space-x-4 mb-4">
               <div className="w-12 h-12 rounded-2xl bg-[#075E54] dark:bg-[#00a884] text-white flex items-center justify-center font-extrabold text-lg shadow-md shadow-emerald-950/20">
                 2
               </div>
@@ -69,7 +69,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ currentLang }) => {
             </div>
 
             <p 
-              className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-6 flex-1"
+              className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-4 flex-1"
               dangerouslySetInnerHTML={{ __html: t('step2-desc') }}
             />
 
@@ -85,8 +85,8 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ currentLang }) => {
           </div>
 
           {/* Step 3 */}
-          <div className="flex flex-col bg-emerald-50/40 dark:bg-emerald-950/10 rounded-3xl p-6 sm:p-8 border border-emerald-50 dark:border-emerald-900/20 hover:border-emerald-100/80 hover:dark:border-emerald-800/40 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-            <div className="flex items-center space-x-4 mb-6">
+          <div className="flex flex-col bg-emerald-50/40 dark:bg-emerald-950/10 rounded-3xl p-5 sm:p-6 border border-emerald-50 dark:border-emerald-900/20 hover:border-emerald-100/80 hover:dark:border-emerald-800/40 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div className="flex items-center space-x-4 mb-4">
               <div className="w-12 h-12 rounded-2xl bg-[#075E54] dark:bg-[#00a884] text-white flex items-center justify-center font-extrabold text-lg shadow-md shadow-emerald-950/20">
                 3
               </div>
@@ -96,7 +96,7 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ currentLang }) => {
             </div>
 
             <p 
-              className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-6 flex-1"
+              className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-4 flex-1"
               dangerouslySetInnerHTML={{ __html: t('step3-desc') }}
             />
 
@@ -117,32 +117,32 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ currentLang }) => {
         </div>
 
         {/* Dynamic Trust Stats Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 border-t border-gray-100 dark:border-gray-800">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 pt-5 border-t border-gray-100 dark:border-gray-800">
           
-          <div className="flex items-center space-x-4 bg-gray-50/60 dark:bg-emerald-950/10 p-5 rounded-2xl border border-gray-100 dark:border-emerald-900/20 transition-all hover:bg-white hover:dark:bg-[#202c33]/40 hover:shadow-md">
-            <div className="p-3 bg-[#DCF8C6]/60 dark:bg-emerald-900/30 rounded-xl">
-              <Zap className="w-6 h-6 text-[#075E54] dark:text-[#25D366]" />
+          <div className="flex items-center space-x-3 bg-gray-50/60 dark:bg-emerald-950/10 p-3.5 rounded-xl border border-gray-100 dark:border-emerald-900/20 transition-all hover:bg-white hover:dark:bg-[#202c33]/40 hover:shadow-md">
+            <div className="p-2.5 bg-[#DCF8C6]/60 dark:bg-emerald-900/30 rounded-lg">
+              <Zap className="w-5 h-5 text-[#075E54] dark:text-[#25D366]" />
             </div>
             <div>
-              <p className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">{t('stat-speed')}</p>
+              <p className="text-sm sm:text-base font-bold text-gray-900 dark:text-white">{t('stat-speed')}</p>
             </div>
           </div>
 
-          <div className="flex items-center space-x-4 bg-gray-50/60 dark:bg-emerald-950/10 p-5 rounded-2xl border border-gray-100 dark:border-emerald-900/20 transition-all hover:bg-white hover:dark:bg-[#202c33]/40 hover:shadow-md">
-            <div className="p-3 bg-[#DCF8C6]/60 dark:bg-emerald-900/30 rounded-xl">
-              <MessageSquare className="w-6 h-6 text-[#075E54] dark:text-[#25D366]" />
+          <div className="flex items-center space-x-3 bg-gray-50/60 dark:bg-emerald-950/10 p-3.5 rounded-xl border border-gray-100 dark:border-emerald-900/20 transition-all hover:bg-white hover:dark:bg-[#202c33]/40 hover:shadow-md">
+            <div className="p-2.5 bg-[#DCF8C6]/60 dark:bg-emerald-900/30 rounded-lg">
+              <MessageSquare className="w-5 h-5 text-[#075E54] dark:text-[#25D366]" />
             </div>
             <div>
-              <p className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">{t('stat-no-app')}</p>
+              <p className="text-sm sm:text-base font-bold text-gray-900 dark:text-white">{t('stat-no-app')}</p>
             </div>
           </div>
 
-          <div className="flex items-center space-x-4 bg-gray-50/60 dark:bg-emerald-950/10 p-5 rounded-2xl border border-gray-100 dark:border-emerald-900/20 transition-all hover:bg-white hover:dark:bg-[#202c33]/40 hover:shadow-md">
-            <div className="p-3 bg-[#DCF8C6]/60 dark:bg-emerald-900/30 rounded-xl">
-              <Award className="w-6 h-6 text-[#075E54] dark:text-[#25D366]" />
+          <div className="flex items-center space-x-3 bg-gray-50/60 dark:bg-emerald-950/10 p-3.5 rounded-xl border border-gray-100 dark:border-emerald-900/20 transition-all hover:bg-white hover:dark:bg-[#202c33]/40 hover:shadow-md">
+            <div className="p-2.5 bg-[#DCF8C6]/60 dark:bg-emerald-900/30 rounded-lg">
+              <Award className="w-5 h-5 text-[#075E54] dark:text-[#25D366]" />
             </div>
             <div>
-              <p className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">{t('stat-no-training')}</p>
+              <p className="text-sm sm:text-base font-bold text-gray-900 dark:text-white">{t('stat-no-training')}</p>
             </div>
           </div>
 

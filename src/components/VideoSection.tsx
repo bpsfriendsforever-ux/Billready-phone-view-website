@@ -15,11 +15,11 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ currentLang }) => {
   };
 
   return (
-    <section id="video-demo" className="py-16 sm:py-24 bg-[#faf8f5] dark:bg-[#0f171c] border-b border-gray-100 dark:border-gray-800">
+    <section id="video-demo" className="py-10 sm:py-16 bg-[#faf8f5] dark:bg-[#0f171c] border-b border-gray-100 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
           <div className="inline-flex items-center space-x-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-100 dark:border-emerald-900/40 px-3.5 py-1.5 rounded-full text-[#075E54] dark:text-[#25D366] text-xs sm:text-sm font-semibold uppercase tracking-wider">
             <Sparkles className="w-4 h-4 text-[#25D366]" />
             <span>{t('video-badge')}</span>
@@ -33,7 +33,7 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ currentLang }) => {
         </div>
 
         {/* Video Player Box - Highly Responsive aspect-ratio box */}
-        <div className="relative w-full max-w-4xl mx-auto rounded-3xl overflow-hidden border-8 border-white dark:border-[#202c33] bg-slate-950 shadow-2xl aspect-video group mb-16 sm:mb-24">
+        <div className="relative w-full max-w-4xl mx-auto rounded-3xl overflow-hidden border-8 border-white dark:border-[#202c33] bg-slate-950 shadow-2xl aspect-video group mb-6 sm:mb-8">
           
           {isPlaying ? (
             /* Active simulated video player */
@@ -120,9 +120,9 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ currentLang }) => {
         </div>
 
         {/* 3-Column Video Key Highlights Grid (Stacks on mobile screens) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           
-          <div className="bg-white dark:bg-[#182229] rounded-2xl p-6 sm:p-8 border border-gray-100/60 dark:border-emerald-900/10 shadow-sm transition-all hover:shadow-md">
+          <div className="bg-white dark:bg-[#182229] rounded-2xl p-4 sm:p-5 border border-gray-100/60 dark:border-emerald-900/10 shadow-sm transition-all hover:shadow-md">
             <h3 className="text-lg font-extrabold text-gray-900 dark:text-white mb-2 flex items-center space-x-2">
               <span className="w-2 h-2 rounded-full bg-[#25D366]"></span>
               <span>{t('video-feature-1-title')}</span>
@@ -131,8 +131,8 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ currentLang }) => {
               {t('video-feature-1-desc')}
             </p>
           </div>
-
-          <div className="bg-white dark:bg-[#182229] rounded-2xl p-6 sm:p-8 border border-gray-100/60 dark:border-emerald-900/10 shadow-sm transition-all hover:shadow-md">
+ 
+          <div className="bg-white dark:bg-[#182229] rounded-2xl p-4 sm:p-5 border border-gray-100/60 dark:border-emerald-900/10 shadow-sm transition-all hover:shadow-md">
             <h3 className="text-lg font-extrabold text-gray-900 dark:text-white mb-2 flex items-center space-x-2">
               <span className="w-2 h-2 rounded-full bg-[#25D366]"></span>
               <span>{t('video-feature-2-title')}</span>
@@ -141,8 +141,8 @@ export const VideoSection: React.FC<VideoSectionProps> = ({ currentLang }) => {
               {t('video-feature-2-desc')}
             </p>
           </div>
-
-          <div className="bg-white dark:bg-[#182229] rounded-2xl p-6 sm:p-8 border border-gray-100/60 dark:border-emerald-900/10 shadow-sm transition-all hover:shadow-md">
+ 
+          <div className="bg-white dark:bg-[#182229] rounded-2xl p-4 sm:p-5 border border-gray-100/60 dark:border-emerald-900/10 shadow-sm transition-all hover:shadow-md">
             <h3 className="text-lg font-extrabold text-gray-900 dark:text-white mb-2 flex items-center space-x-2">
               <span className="w-2 h-2 rounded-full bg-[#25D366]"></span>
               <span>{t('video-feature-3-title')}</span>
